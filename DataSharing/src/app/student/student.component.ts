@@ -10,7 +10,7 @@ export class StudentComponent implements OnInit {
 
   @Input() teacher: Teacher;
   @Input('principle') principleName: string;
-
+ 
   constructor() { }
 
   ngOnInit() {
