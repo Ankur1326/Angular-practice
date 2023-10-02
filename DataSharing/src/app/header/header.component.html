@@ -1,0 +1,15 @@
+<p>header works!</p>
+
+<h1>
+    <span style="color: red; font-size: large;">
+        I am Parent Component behaving as a parent for the @output and Event emitter :)
+    </span>
+</h1>
+
+<div style="width: 100%; background-color: cornflowerblue;">
+    <h2 style="color: white;">
+        Welcome {{userName}}
+    </h2>
+</div>
+
+<app-login (login)="onLogin($event)"></app-login>
