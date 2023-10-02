@@ -5,7 +5,7 @@ import { Teachers } from '../model/teacher.model';
   selector: 'app-teacher',
   templateUrl: './teacher.component.html',
   styleUrls: ['./teacher.component.css']
-}) 
+})
 export class TeacherComponent implements OnInit {
 
   teachers = Teachers;
