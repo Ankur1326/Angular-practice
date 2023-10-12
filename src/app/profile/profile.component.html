@@ -1,6 +1,6 @@
 <p>profile works!</p>
 <h1>
-    I am {{name.toUpperCase()}} my age is {{age}} and status is {{status}}
+    I am {{name | titlecase}} my age is {{age}} and status is {{status}}
 </h1>
 
 <button [class]="btnColor" [disabled]="isDisable">Click me</button>
@@ -20,7 +20,6 @@
 
 <ul *ngFor="let fruit of fruits; index as i; even as e">
     <li>{{fruit}} {{i}} {{e}}</li>
-
 </ul>
 
 <hr>
@@ -34,3 +33,8 @@
 <ul *ngFor="let hero of heros; index as i; even as e" [class]="e?'red':'pine'">
     <h1 *ngIf="e">{{hero}} {{i}} {{e}}</h1>
 </ul>
+
+
+<!-- pips  -->
+<input type="date" [(ngModel)]="myDate">
+{{myDate}}
