@@ -1,0 +1,9 @@
+<div class="card " style="width: 18rem; height: 25rem;">
+    <ng-content select="h1"></ng-content>
+    <img src="{{imagePath}}" class="h-60" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{firstName}} {{lastName}} {{age}} {{salary}}</h5>
+        <button class="btn btn-primary" (click)="passData()">Click</button>
+    </div>
+    <ng-content select="h2"></ng-content>
+</div>
