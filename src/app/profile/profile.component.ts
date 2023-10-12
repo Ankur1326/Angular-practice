@@ -36,4 +36,6 @@ export class ProfileComponent {
   fruits = ["banana", "mango", "apple", "orange", "pinaple"]
 
   heros = ["Dwayne", "Vin", "Tom", "Johnny", "Robert", "Leonardo"]
+
+  myDate !: Date;
 }
