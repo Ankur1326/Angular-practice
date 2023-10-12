@@ -1,1 +1,24 @@
-<app-profile></app-profile>
+<!-- <app-profile></app-profile> -->
+
+<!-- <app-users name="ram"></app-users> -->
+<!-- <app-users name="ramesh" lastName="kumar"></app-users> -->
+<div class="flex justify-center" *ngIf="show" >
+    <div *ngFor="let user of users" class="border w-fit ">
+        <app-users [firstName]="user.firstName" [lastName]="user.lastName" [age]="user.age" [salary]="user.salary"
+            [imagePath]="user.imagePath" (myevent)="recieveData($event)">
+            <h1>Header</h1>
+            <h2>footer</h2>
+        </app-users>
+    </div>
+</div>
+<button (click)="show = !show" class="btn btn-danger">toggle component</button>
+
+<!-- <app-users [firstName]="data[0].firstName" [lastName]="data[0].lastName" [age]="data[0].age"
+    [salary]="data[0].salary">
+</app-users>
+<app-users [firstName]="data[1].firstName" [lastName]="data[1].lastName" [age]="data[1].age"
+    [salary]="data[1].salary">
+</app-users>
+<app-users [firstName]="data[2].firstName" [lastName]="data[2].lastName" [age]="data[2].age"
+    [salary]="data[2].salary">
+</app-users> -->
