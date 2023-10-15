@@ -11,6 +11,9 @@
         </app-users>
     </div>
 </div>
+
+<h1>{{phoneNum | countryCode:"USA"}}</h1>
+
 <button (click)="show = !show" class="btn btn-danger">toggle component</button>
 
 <!-- <app-users [firstName]="data[0].firstName" [lastName]="data[0].lastName" [age]="data[0].age"

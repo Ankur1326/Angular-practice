@@ -7,6 +7,7 @@ import { User } from 'src/models/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  phoneNum = '9823424353'
   title = 'Practice_Angular';
 
   users: Array<User> = [
