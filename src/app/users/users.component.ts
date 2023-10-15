@@ -8,33 +8,33 @@ import { Component, EventEmitter, Input, OnInit, Output, OnChanges, OnDestroy } 
 export class UsersComponent implements OnInit, OnChanges, OnDestroy {
 
   @Input() name!: string;
-            
+
   @Input() firstName: string;
   @Input() lastName: string;
   @Input() age: Number;
   @Input() salary: Number;
   @Input() imagePath: string;
-  
+
   @Output() myevent = new EventEmitter<string>()
-  
+
   passData() {
     this.myevent.emit("coders never quit")
   }
 
   constructor() {
-
+    
   }
 
   text: String;
 
-  listenerRef = setInterval(() => {}, 1000)
-  
+  listenerRef = setInterval(() => { }, 1000)
+
   ngOnInit() { // ngOnInit is always call after constrctor
     this.text = "I am text"
     // properties 
     // event listener register
     // initial data fetch
-    
+
     this.listenerRef = setInterval(() => {
       console.log('timer running...')
     }, 2000)
@@ -47,7 +47,7 @@ export class UsersComponent implements OnInit, OnChanges, OnDestroy {
   ngOnDestroy() {
     console.log("ngOnDestroy");
     clearInterval(this.listenerRef)
-    
+
   }
 
 }

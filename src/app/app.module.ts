@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
+import { HighlightDirective } from '../directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     UsersComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
