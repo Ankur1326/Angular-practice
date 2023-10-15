@@ -8,6 +8,11 @@ import { StudentComponent } from './student/student.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { EcparentComponent } from './ecparent/ecparent.component';
+import { EcchildComponent } from './ecparent/ecchild/ecchild.component';
+import { BasiccheckComponent } from './basiccheck/basiccheck.component';
+import { AdvancecheckComponent } from './advancecheck/advancecheck.component';
+import { FinalcheckComponent } from './finalcheck/finalcheck.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +20,12 @@ import { FormsModule } from '@angular/forms';
     TeacherComponent,
     StudentComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    EcparentComponent,
+    EcchildComponent,
+    BasiccheckComponent,
+    AdvancecheckComponent,
+    FinalcheckComponent
   ],
   imports: [
     BrowserModule,

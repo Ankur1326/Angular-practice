@@ -1,0 +1,11 @@
+<p>ecparent works!</p>
+
+<h1>
+    Election Commission Parent component.
+</h1>
+
+<h3>Vote Counting (via ViewChild)</h3>
+<button (click)="start()">Start Vote Counting</button>
+<button (click)="stop()">Stop Vote Counting(Lunch Break)</button>
+<div class="seconds">{{ seconds() }}</div>
+<app-ecchild></app-ecchild>
