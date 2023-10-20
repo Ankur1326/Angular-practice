@@ -1,0 +1,40 @@
+<p>profile works!</p>
+<h1>
+    I am {{name | titlecase}} my age is {{age}} and status is {{status}}
+</h1>
+
+<button [class]="btnColor" [disabled]="isDisable">Click me</button>
+
+<button class="btn btn-primary" (click)="convertToIner()">Click me</button>
+
+<input type="text" [value]="inputValue" (input)="getInput($event)" name="" id="">
+<h1>{{inputValue}}</h1>
+
+<!-- Two way data binding -->
+<input type="text" [(ngModel)]="inputValue">
+
+<h2 *ngIf="salary > 50; else lowsalary">salary is grater then 50</h2>
+<ng-template #lowsalary>
+    <h3>salary is lessthen 50</h3>
+</ng-template>
+
+<ul *ngFor="let fruit of fruits; index as i; even as e">
+    <li>{{fruit}} {{i}} {{e}}</li>
+</ul>
+
+<hr>
+<br>
+<ul *ngFor="let hero of heros; index as i; even as e">
+    <h1 *ngIf="e">{{hero}} {{i}} {{e}}</h1>
+</ul>
+
+<hr>
+
+<ul *ngFor="let hero of heros; index as i; even as e" [class]="e?'red':'pine'">
+    <h1 *ngIf="e">{{hero}} {{i}} {{e}}</h1>
+</ul>
+
+
+<!-- pips  -->
+<input type="date" [(ngModel)]="myDate">
+{{myDate}}
