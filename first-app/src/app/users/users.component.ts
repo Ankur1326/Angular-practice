@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   constructor() {
-    
+
   }
 
   text: String;

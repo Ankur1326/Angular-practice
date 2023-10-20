@@ -10,7 +10,7 @@ export class HighlightDirective implements OnInit {
     // this.el = el;
   }
 
-  @HostBinding('style.backgroundColor') bgColor:any; // is a decorator 
+  @HostBinding('style.backgroundColor') bgColor: any; // is a decorator 
   @HostListener('mouseenter')
   onEnter() {
     this.bgColor = "red"
@@ -24,5 +24,5 @@ export class HighlightDirective implements OnInit {
     // this.el.nativeElement.style.backgroundColor = 'pink' 
     this.bgColor = 'blueviolet'
   }
-    
+
 }
