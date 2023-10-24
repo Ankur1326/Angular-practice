@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit {
     Validators.required,
     Validators.minLength(6)
   ])
-
-  loginForm = new FormGroup({
+  
+  loginForm = new FormGroup({ 
     email:this.email,
     password:this.password
   })
