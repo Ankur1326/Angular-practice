@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    MovieComponent
+    MovieComponent,
   ],
   imports: [
     BrowserModule,

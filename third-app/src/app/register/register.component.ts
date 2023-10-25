@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -11,5 +12,11 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  register(regForm:NgForm) {
+    console.log(regForm.value);
+  }
 
+  reset(regForm:NgForm) {
+    regForm.reset();
+  }
 }

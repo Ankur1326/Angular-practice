@@ -6,6 +6,8 @@
     <h5 class="red-text" [hidden]="password.valid || password.untouched">Password is required and must be > 6 digits</h5>
  
     <button class="btn green" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+
+    <button class="btn blue" (click)="reset()">reset</button>
 </form>
 
 <h1>{{email.value}}</h1>

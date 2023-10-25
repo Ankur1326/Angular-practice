@@ -1,1 +1,16 @@
-<p>register works!</p>
+<form class="container" #registerForm="ngForm">
+    <h4>Register</h4>
+    <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="email" required ngModel #email="ngModel" />
+    <h5 class="red-text" [hidden]="email.valid || email.untouched">Enter Correct email</h5>
+    <input type="text" name="text" ngModel />
+    <input type="password" name="password" minlength="6" required ngModel />
+
+    <h5 class="red-text">Password is required and must be > 6 digits</h5>
+
+    <button class="btn green" [disabled]="registerForm.invalid" (click)="register(registerForm)" >Register</button>
+    <button class="btn blue" (click)="reset(registerForm)">reset</button>
+</form>
+
+<h1>{{registerForm.value | json}}</h1>
+<!-- <h1>email valid {{email.valid}}</h1> -->
+<!-- <h1>is untouched {{email.untouched}}</h1> -->
