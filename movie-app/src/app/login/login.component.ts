@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  username:string = ""; 
+  username: string = "";
   password = "";
-  errorMsg:string = "";
+  errorMsg: string = "";
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.username.trim().length === 0) {
       this.errorMsg = "Username is required"
-    } else if(this.password.trim().length === 0) {
+    } else if (this.password.trim().length === 0) {
       this.errorMsg = "Password is required"
     } else {
       this.errorMsg = "";
