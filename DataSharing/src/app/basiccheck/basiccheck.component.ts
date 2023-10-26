@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { approvalService } from "../services/approval.service";
 
 @Component({
   selector: 'app-basiccheck',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basiccheck.component.css']
 })
 export class BasiccheckComponent implements OnInit {
+  message: string = "";
+  approvalText: string = "";
+  constructor(private appService: approvalService) { }
 
-  constructor() { }
+  ngOnInit() {
+    this.appService.currentApprovalStageMessage.subscribe(msg => this.message = msg);
 
-  ngOnInit(): void {
+  }
+
+  submit() {
+    console.log(this.approvalText)
+    this.appService.updateApprovalMessage(this.approvalText)
   }
 
 }

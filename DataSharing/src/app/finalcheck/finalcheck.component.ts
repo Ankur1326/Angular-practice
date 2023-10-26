@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { approvalService } from '../services/approval.service';
 
 @Component({
   selector: 'app-finalcheck',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./finalcheck.component.css']
 })
 export class FinalcheckComponent implements OnInit {
+  message: string = "";
+  approvalText: string = "";
+  constructor(private appService: approvalService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.appService.currentApprovalStageMessage.subscribe(msg => this.message = msg);
   }
+  submit() {
 
+    this.appService.updateApprovalMessage(this.approvalText);
+  }
 }
