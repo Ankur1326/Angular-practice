@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { MovieComponent } from './movie/movie.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+// import { CardComponent } from './card/card.component';
+// import { CardActionsComponent } from './card/card-actions/card-actions.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     MovieComponent,
+    // CardComponent,
+    // CardActionsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    // NgbModal
   ],
   providers: [],
   bootstrap: [AppComponent]

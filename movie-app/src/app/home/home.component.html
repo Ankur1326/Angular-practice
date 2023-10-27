@@ -1,1 +1,91 @@
-<p>home works!</p>
+<app-header></app-header>
+
+<div class="home-container flex">
+    <div class="all-movies">
+        <div class="tranding-movies">
+            <div class="top">
+                <h4>Trending Movies</h4>
+                <div class="view-all">Vies All</div>
+            </div>
+            <div class="movies-thumbnail flex justify-between mt-6">
+                <div class="movie" *ngFor="let movie of trendingMovies">
+                    <div class="cover">
+                        <img [src]="movie.cover" class="rounded-lg w-28" alt="">
+                    </div>
+                    <div class="details ">
+                        <div class="name w-[100px]">{{movie.name}}</div>
+                        <div class="rating">
+                            {{movie.rating}}
+                            <!-- <ng-template #t let-fill="fill">
+                                <span class="star" [class.fill]="fill === 100">
+                                    <span class="half" [style.width.%]="fill">&hearts;</span>
+                                </span>&hearts;
+                            </ng-template>
+
+                            <ngb-rating
+                             [(rate)]="movie.rating"
+                             [starTemplate]="t"
+                             [readOnly]="true"
+                             [max]="5"
+                             ></ngb-rating> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="popular-movie mt-8 ">
+            <div class="top">
+                <h4>popular Movies</h4>
+                <div class="view-all">Vies All</div>
+            </div>
+            <div class="movies-thumbnail flex justify-between mt-2 gap-4 flex-wrap">
+                <div class="movie" *ngFor="let movie of popularMovie">
+                    <div class="cover">
+                        <img [src]="movie.cover" class="rounded-lg w-28" alt="">
+                    </div>
+                    <div class="details ">
+                        <div class="name w-[100px]">{{movie.name}}</div>
+                        <div class="rating">
+                            {{movie.rating}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="theater-movie w-[25%]">
+        <div class="top">
+            <h4>Theatre Movies</h4>
+            <div class="view-all">Vies All popular</div>
+        </div>
+        <div class="movies-thumbnail flex justify-between mt-2 gap-1 flex-wrap">
+            <div class="movie" *ngFor="let movie of theatreMovie">
+                <div class="cover">
+                    <img [src]="movie.cover" class="rounded-lg w-24" alt="">
+                </div>
+                <div class="details ">
+                    <div class="name w-[100px]">{{movie.name}}</div>
+                    <div class="rating">
+                        {{movie.rating}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- <input type="text" class="border" #textName>
+<button class="btn btn-dark" (click)="itemValue = textName; onClick($event)">Click Me</button>
+
+<input type="text" class="border" (click)="onClick($event)">
+<p>{{value}}</p>
+
+<input type="text" class="border" (keyup.enter)="eventHandler($event)">  -->
